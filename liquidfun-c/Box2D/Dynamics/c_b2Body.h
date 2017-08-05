@@ -14,6 +14,8 @@ extern "C" {
 	void* b2Body_GetUserData(const b2Body* self);
 	b2World* b2Body_GetWorld(b2Body* self);
 	b2Vec2 b2Body_GetLocalPoint(const b2Body* self, const b2Vec2& worldPoint);
+	void b2Body_ApplyForce(b2Body* self, const b2Vec2& force, const b2Vec2& point, bool wake);
+	void b2Body_ApplyForceToCenter(b2Body* self, const b2Vec2& force, bool wake);
 
 #ifdef __cplusplus
 } // extern C

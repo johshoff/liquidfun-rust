@@ -39,5 +39,12 @@ extern "C" {
 		return self->GetLocalPoint(worldPoint);
 	}
 
+	void b2Body_ApplyForce(b2Body* self, const b2Vec2& force, const b2Vec2& point, bool wake) {
+		self->ApplyForce(force, point, wake);
+	}
+
+	void b2Body_ApplyForceToCenter(b2Body* self, const b2Vec2& force, bool wake) {
+		self->ApplyForceToCenter(force, wake);
+	}
 } // extern C
 
